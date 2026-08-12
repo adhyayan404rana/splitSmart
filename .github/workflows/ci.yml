@@ -1,0 +1,21 @@
+name: SplitSmart CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, master, develop ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  ci-check:
+    name: System & Pipeline Baseline Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Verify Monorepo Structure
+        run: |
+          echo "SplitSmart Monorepo Pipeline Initialized"
+          ls -la

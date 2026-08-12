@@ -1,0 +1,28 @@
+# Private planning and guidance files
+30_day_commit_plan.md
+guidelines.txt
+milestones.md
+*.prd
+ADR_*.md
+*.pdf
+*.zip
+
+# Backend build artifacts
+backend/target/
+backend/.mvn/wrapper/maven-wrapper.jar
+
+# Frontend build artifacts
+frontend/node_modules/
+frontend/dist/
+frontend/.output/
+frontend/.nitro/
+frontend/.wrangler/
+frontend/.tanstack/
+frontend/.vinxi/
+frontend/.lovable/
+
+# IDE & OS
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
