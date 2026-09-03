@@ -336,7 +336,7 @@ export function IngestScreen({
 
   // Direct Google Gemini Cloud API Call
   async function callGeminiDirect(raw: string, payerName: string): Promise<Extracted | null> {
-    const apiKey = "VITE_GEMINI_API_KEY";
+    const apiKey = (import.meta as unknown as { env: Record<string, string> }).env?.VITE_GEMINI_API_KEY ?? "";
     const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${apiKey}`;
 
     const prompt = `You are SplitSmart's intelligent financial expense extraction AI.
